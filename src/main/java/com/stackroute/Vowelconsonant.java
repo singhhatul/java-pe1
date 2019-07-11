@@ -17,6 +17,11 @@ public class Vowelconsonant {
                 case 'i':
                 case 'o':
                 case 'u':
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
                     System.out.print(" vowel ");
                     break;
                 default:
