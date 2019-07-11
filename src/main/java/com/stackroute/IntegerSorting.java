@@ -7,12 +7,12 @@ public class IntegerSorting {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int number=sc.nextInt();
-        String s = Integer.toString(number);
-        int len=s.length();
+
         int i=0;
         int temp;
         int sum=0;
         int[] arr = new int[100];
+
         do {
             arr[i] = number % 10;
             if(arr[i]%2==0){
