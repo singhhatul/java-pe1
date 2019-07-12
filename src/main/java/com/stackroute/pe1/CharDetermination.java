@@ -1,30 +1,28 @@
 package com.stackroute.pe1;
 
-import java.util.Scanner;
+
 
 public class CharDetermination {
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-
-        System.out.println("Enter input");
-
-        char c= sc. next().charAt(0);
-        if (c>=65 && c<=90){
-            System.out.println("capital letter");
+    public String letterDetermination(char input){
+        String letterType = "";
+        
+        if (input>=65 && input<=90){
+            letterType = "Capital letter";
         }
 
-        else if (c>=97 && c<=122){
-            System.out.println("small letter");
+        else if (input>=97 && input<=122){
+            letterType = "Lowercase letter";
         }
 
-        else if (c>=47 && c<=57){
-            System.out.println("digit ");
+        else if (input>=47 && input<=57){
+            letterType = "Digit";
         }
 
-        else if (c>=0 && c>=47 || c>=54 && c<=64 || c>=91 && c<=96
-                || c>=123 && c<=127){
-            System.out.println("special character");
+        else if (input>=0 && input>=47 || input>=54 && input<=64 || input>=91 && input<=96
+                || input>=123 && input<=127){
+            letterType = "Special symbol";
         }
+        return letterType;
     }
 }
 
