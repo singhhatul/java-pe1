@@ -1,13 +1,8 @@
 package com.stackroute.pe1;
 
-
-import java.util.Scanner;
-
 public class IntegerSorting {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int number=sc.nextInt();
 
+        public String intSorting(int number){
         int i=0;
         int temp;
         int sum=0;
@@ -34,13 +29,10 @@ public class IntegerSorting {
                 }
             }
         }
-        for(int j=0;j<i;j++){
-            System.out.print(arr[j]);
-        }
-        System.out.println("\nsum of even numbers "+sum);
+
         if(sum>15){
-            System.out.println("True");
+            return "True";
         }else
-            System.out.println("False");
+            return "False";
     }
 }
