@@ -1,5 +1,6 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -46,6 +47,10 @@ public class PatternTest {
         //assert
         int[] expectedResult = {};
         assertArrayEquals(expectedResult, actualResult);
+    }
+    @After
+    public void tearDown(){
+        pattTest = null;
     }
 
 
