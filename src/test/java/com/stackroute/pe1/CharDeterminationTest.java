@@ -1,5 +1,6 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -43,5 +44,9 @@ public class CharDeterminationTest {
         String actualResult = this.characterType.letterDetermination('@');
         //assert
         assertEquals("Special symbol", actualResult);
+    }
+    @After
+    public void tearDown(){
+        characterType = null;
     }
 }
