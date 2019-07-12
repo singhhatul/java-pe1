@@ -1,26 +1,26 @@
 package com.stackroute.pe1;
 
 public class JunitDemo {
-    public String concatAndUpperCase(String str1, String str2) {
+    public String concatAndUppercase(String str1, String str2) {
         if (str1 == null || str2 == null) {
-            return ("null value not allowed");
+            return "Null Value Not Allowed";
         }
-        String concatcatedString = str1.concat(str2);
-        return concatcatedString.toUpperCase();
+        String concatedString = str1.concat(str2);
+        return concatedString.toUpperCase();
     }
 
     public String reverseString(String str) {
-        String temp = "";
+        String reverseOfString = "";
         try {
-            int len = str.length();
+            for (int i = str.length() - 1; i >= 0; i--) {
+                reverseOfString = reverseOfString.concat(String.valueOf(str.charAt(i)));
 
-            for (int i = len - 1; i >= 0; i--) {
-                temp = temp + str.charAt(i);
             }
-
-        } catch (Exception e) {
-           return "NullPointerException Caught";
+        } catch (NullPointerException ex) {
+            reverseOfString = ex.toString();
+            System.out.println(ex.toString());
+            return ex.toString();
         }
-        return temp;
+        return reverseOfString;
     }
 }

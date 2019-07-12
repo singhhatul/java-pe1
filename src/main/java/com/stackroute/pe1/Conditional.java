@@ -2,18 +2,25 @@ package com.stackroute.pe1;
 import java.util.Scanner;
 
 public class Conditional {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int num = sc.nextInt();
 
-        if((num > 20) && (num < 30)){
-            if(num % 2 != 0){
-                System.out.println("TOM");
-            }else
-                System.out.println("JERRY");
+    public String tomOrJerryFinder(int inputNum) {
+        String returnString = "Not in between 20 and 30";
+        if (isBetween20And30(inputNum)){
+            if (inputNum % 2 == 0){
+                returnString = "Jerry";
+            }
+            else {
+                returnString = "Tom";
+            }
+        }
+        return returnString;
+    }
 
-        }else
-            System.out.println("number is not between 20 and 30");
+    private static boolean isBetween20And30(int num){
+        boolean boo = false;
+        if ( (num >= 20) && (num <= 30) ){
+            boo = true;
+        }
+        return boo;
     }
 }
