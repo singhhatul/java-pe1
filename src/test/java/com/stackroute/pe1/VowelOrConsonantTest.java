@@ -1,6 +1,7 @@
 package com.stackroute.pe1;
 
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -38,5 +39,9 @@ public class VowelOrConsonantTest {
         String[] expected = {"Vowel", "Consonant", "Not a letter"};
         assertArrayEquals(expected, actualResult);
 //        assertEquals(expected, actualResult);
+    }
+    @After
+    public void tearDown(){
+        vowelOrConsonant= null;
     }
 }
