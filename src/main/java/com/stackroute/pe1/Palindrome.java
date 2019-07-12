@@ -1,34 +1,39 @@
 package com.stackroute.pe1;
-import java.util.Scanner;
 
-public class Palindrome {
-
-    public static void main(String[] args) {
-        long temp;
-        long sum = 0;
-        long evensum=0;
-        long rem;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter the number you want to check");
-        long num = sc.nextLong();
-        temp = num;
-
-
-        while (temp > 0) {
-            rem = temp % 10;
-            if(rem%2==0){
-                evensum=evensum+rem;
+    public class Palindrome  {
+        public String palindromeSum(long inputNum){
+            String returnResult = "Not a palindrome";
+            if (isPalindrome(inputNum)) {
+                if ( (isSumOfEvenNum(inputNum) > 25) ) {
+                    returnResult = "Palindrome and greater than 25";
+                }
+                else {
+                    returnResult = "Palindrome and smaller than 25";
+                }
             }
-            sum = (sum * 10) + rem;
-            temp = temp / 10;
+            return returnResult;
         }
-        if (sum == num) {
-            if(evensum>25){
-                System.out.println(num + " is palindrome and the sum of even number is greater than 25");
-            } else
-                System.out.println(num + " is palindrome and the sum of even number is less than 25");
+
+        private boolean isPalindrome(long number){
+            String str = "";
+            String stringNum = String.valueOf(number);
+            boolean boo = false;
+            for (int i = stringNum.length() -1; i >=0; i--){
+                str = str.concat( String.valueOf(stringNum.charAt(i)) );
+            }
+            if (str.equals(stringNum)) boo = true;
+            return boo;
         }
-        else
-            System.out.println(num + "is not palindrome ");
+
+        private int isSumOfEvenNum(long number){
+            int sumOfEvenNum = 0;
+            long localNumber = number;
+            while (localNumber > 0){
+                if ( (localNumber % 10) % 2 == 0 ){
+                    sumOfEvenNum += localNumber % 10;
+                }
+                localNumber = localNumber / 10;
+            }
+            return sumOfEvenNum;
+        }
     }
-}
