@@ -17,11 +17,10 @@ public class PatternTest {
     @Test
     public void givenNumberShouldReturnAnArray() {
         //act
-        int[] actualResult = this.pattTest.printer(9);
+        int[] actualResult = this.pattTest.printer(7);
         //assert
         int[] expectedResult = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5,
-                6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 8, 8,
-                8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9};
+                6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7};
         assertArrayEquals(expectedResult, actualResult);
     }
 
