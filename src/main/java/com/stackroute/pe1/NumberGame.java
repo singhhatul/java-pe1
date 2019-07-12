@@ -1,4 +1,4 @@
-package com.stackroute;
+package com.stackroute.pe1;
 import java.util.*;
 public class NumberGame {
     public static void main(String[] args){
@@ -7,7 +7,7 @@ public class NumberGame {
         System.out.printf("Enter the number between 1 to 50 and 1 to 100");
         int  from = sc.nextInt();
         int to = sc.nextInt();
-        int randomNumber = random.nextInt(to -from+1) + from;
+        int randomNumber = random.nextInt(to -from+1);
         int guessedNumber = 0;
 
         System.out.printf("The number is between %d and %d.\n", from, to);
