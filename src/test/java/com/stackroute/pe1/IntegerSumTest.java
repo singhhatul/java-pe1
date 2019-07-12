@@ -1,5 +1,6 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -41,4 +42,8 @@ public class IntegerSumTest {
             //assert
             assertEquals("0", actualResult);
         }
+    @After
+    public void tearDown(){
+        integerAndNonIntegerValue = null;
+    }
     }
