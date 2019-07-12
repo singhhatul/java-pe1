@@ -1,5 +1,6 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -35,6 +36,10 @@ public class PalindromeTest {
         String actualResult = this.palindrome.palindromeSum(99899);
         //assert
         assertEquals("Palindrome and smaller than 25", actualResult);
+    }
+    @After
+    public void tearDown(){
+        palindrome= null;
     }
 
 }
