@@ -32,7 +32,9 @@ public class IntegerSorting {
 
         if(sum>15){
             return "True";
-        }else
+        }
+        else {
             return "False";
+        }
     }
 }

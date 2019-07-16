@@ -17,10 +17,10 @@ public class Conditional {
     }
 
     private static boolean isBetween20And30(int num){
-        boolean boo = false;
+        boolean flag = false;
         if ( (num >= 20) && (num <= 30) ){
-            boo = true;
+            flag = true;
         }
-        return boo;
+        return flag;
     }
 }

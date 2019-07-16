@@ -17,12 +17,14 @@ package com.stackroute.pe1;
         private boolean isPalindrome(long number){
             String str = "";
             String stringNum = String.valueOf(number);
-            boolean boo = false;
+            boolean flag = false;
             for (int i = stringNum.length() -1; i >=0; i--){
                 str = str.concat( String.valueOf(stringNum.charAt(i)) );
             }
-            if (str.equals(stringNum)) boo = true;
-            return boo;
+            if (str.equals(stringNum)) {
+                flag = true;
+            }
+            return flag;
         }
 
         private int isSumOfEvenNum(long number){

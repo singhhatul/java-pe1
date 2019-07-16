@@ -16,14 +16,14 @@ public class StringTrimming {
         String result="";
 
         int lengthOfString=str.length();
-        String sub=str.substring(lengthOfString-number,lengthOfString);
+        String substring=str.substring(lengthOfString-number,lengthOfString);
 
         for(int i=0;i<number;i++)
         {
-            result=result+sub;
+            result=result+substring;
         }
 
-        return str+result;
+        return str.concat(result);
 
     }
 }

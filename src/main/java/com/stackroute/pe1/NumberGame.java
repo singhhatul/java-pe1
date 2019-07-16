@@ -22,8 +22,9 @@ public class NumberGame {
             else if (guessedNumber < randomNumber) {
                 System.out.println("Your guess is too low!");
             }
-            else
+            else {
                 System.out.println("You got it!");
+            }
         } while (guessedNumber != randomNumber);
     }
 }
